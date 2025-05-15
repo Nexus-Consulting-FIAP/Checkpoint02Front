@@ -1,0 +1,14 @@
+* {
+    font-family: "Gill Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #1B1B1E;
+    --secondary-color: #D72638;
+    --darker-secondar-color: #931736;
+    --bg-color: #FAF3DD;
+    --text-color: #FFFFFF;
+    --dark-text-color: #000000;
+}
