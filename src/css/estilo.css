@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B1B1E;
+    box-shadow: 4px 4px #000;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li h1{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 800;
+}
+header nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+}
+header nav ul li a:hover{
+    color:#D72638;
+}
