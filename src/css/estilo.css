@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #fff;
+    background: #ffffff;
 
 }
 header{
@@ -32,4 +32,12 @@ header nav ul li a{
 }
 header nav ul li a:hover{
     color:#D72638;
+}
+.hero{
+    justify-content: space-between;
+    gap: 20px;
+}
+#imagem-home{
+    opacity: 100%;
+    width: 1280px;
 }
