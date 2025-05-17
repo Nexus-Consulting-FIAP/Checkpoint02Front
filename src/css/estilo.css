@@ -14,6 +14,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    transition: 0.2s;
 }
 
 html {
@@ -37,8 +38,10 @@ body {
 }
 
 header {
+    z-index: 4;
+    position: fixed;
+    width: 100%;
     background-color: var(--dark);
-    box-shadow: 4px 4px var(--black);
 }
 
 header nav {
@@ -78,10 +81,10 @@ header nav ul li a:hover {
 
 .black-opacity {
     position: absolute;
-    height: 100vh;
+    height: 91.3vh;
     width: 100%;
     background-color: var(--black);
-    opacity: 50%;
+    opacity: 60%;
     z-index: 1;
 }
 
@@ -90,6 +93,7 @@ header nav ul li a:hover {
 }
 
 footer {
+    z-index: 4;
     color: var(--white);
     background-color: var(--dark);
     padding: 0px 10px;
@@ -97,6 +101,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     height: 5rem;
+    width: 100%;
     text-align: justify;
 }
 
@@ -114,7 +119,10 @@ footer svg {
     background-color: var(--wine-red);
     pointer-events: none;
 }
-
+section {
+    padding-top: 5rem;
+    width: 100%;
+}
 /* #endregion */
 
 /* #region home */
@@ -124,7 +132,7 @@ footer svg {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 100vh;
     background-image: url(../assets/imagem_sushi_home.jpg);
     background-repeat: no-repeat;
@@ -143,15 +151,21 @@ footer svg {
     font-size: 3.1rem;
 }
 
+.options-hero {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+}
 .options-hero a {
     text-decoration: none;
     color: var(--white);
-    font-size: 4rem;
+    white-space: nowrap;
+    font-size: 3rem;
     font-weight: 800;
-    padding: 6px;
+    padding: 1rem 0.5rem;
     background-color: var(--red);
     border-radius: 20px;
-    margin: 0 3vw;
 }
 
 .options-hero a:hover {
@@ -163,6 +177,38 @@ footer svg {
     width: 1280px;
 }
 
+@media (width <= 96rem) {
+    .home-title {
+        font-size: 6rem;
+    }
+    .home-text {
+        font-size: 2.3rem;
+    }
+}
+@media (width <= 70rem) {
+    .home-title {
+        font-size: 4rem;
+    }
+    .home-text {
+        font-size: 1.5rem;
+    }
+    .options-hero a {
+        font-size: 2rem;
+    }
+}
+@media (width <= 48rem) {
+    .home-title {
+        font-size: 3rem;
+    }
+    .home-text {
+        font-size: 1.1rem;
+    }
+    .options-hero {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}
 /* #endregion */
 
 /* #region cardapio */
@@ -172,12 +218,11 @@ footer svg {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    padding: 5rem;
+    padding-inline: 5rem;
     justify-content: center;
     align-items: center;
     gap: 5rem;
 }
-
 .grid {
     width: 100%;
     display: grid;
@@ -210,13 +255,14 @@ footer svg {
 }
 
 .card img {
-    height: 164px;
-    width: 164px;
+    height: 10rem;
+    width: 10rem;
     border-radius: 100%;
 }
 
 .tabela-promocional {
     z-index: 2;
+    width: 50rem;
     padding: 1rem 1rem;
     border-radius: 20px;
     display: flex;
@@ -246,6 +292,48 @@ footer svg {
     margin: 2rem;
 }
 
+@media (width <= 80rem) {
+    .cardapio {
+        height: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+    .cardapio .black-opacity {
+        height: 100%;
+    }
+    .card img {
+        height: 7rem;
+        width: 7rem;
+    }
+    .tabela-promocional {
+        width: 80%;
+        flex-direction: row;
+    }
+}
+@media (width <= 46rem) {
+    .cardapio {
+        padding-inline: 1rem;
+    }
+    .card {
+        align-items: center;
+        flex-direction: column;
+    }
+    .card img {
+        border-radius: 1rem;
+    }
+    .card p {
+        display: none;
+    }
+    .tabela-promocional h2 {
+        display: none;
+    }
+}
+@media (width <= 40rem) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 /* #endregion */
 
 /* #region contato */
@@ -308,8 +396,34 @@ footer svg {
     background-color: var(--wine-red);
     cursor: pointer;
 }
-@media (width <= 48rem) {
-    
+@media (width <= 54rem) {
+    #contato {
+        justify-content: center;
+    }
+    .forms {
+        left: auto;
+    }
+}
+@media (width <= 50rem) {
+    .forms {
+        width: 90vw;
+    }
+}
+@media (width <= 50rem) {
+    .forms {
+        padding: 6rem 1rem;
+    }
+    .forms h3 {
+        font-size: 2.3rem;
+    }
+    .forms button {
+        padding: 1rem 15vw;
+    }
+}
+@media (width <= 30rem) {
+    .forms h3 {
+        font-size: 1.8rem;
+    }
 }
 /* #endregion */
 
@@ -342,78 +456,26 @@ footer svg {
     font-size: 2.4rem;
 }
 
-/* #endregion */
-
-@media screen and (width <=1550px) {
-
-    /*index.html*/
-    .options-hero a {
-        font-size: 2rem;
-        margin: 0 1rem;
-    }
-
-    /*cardapio*/
-    .cardapio {
-        gap: 1rem;
-        flex-direction: column;
-    }
-
-    .tabela-promocional {
-        padding: 0.2rem 0.2rem;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .tabela-promocional h2 {
-        font-size: 3rem;
-        font-weight: 600;
-        margin: 0.4rem;
-    }
-
-    .tabela-promocional ul {
-        list-style: none;
-    }
-
-    .tabela-promocional p {
-        margin: 0.3rem;
-    }
-
-    /*about-us*/
+@media (width <= 96rem) {
     .sobre .content {
         padding: 1rem;
         height: 80vh;
     }
+    .sobre p {
+        font-size: 2rem;
+    }
 }
-
-@media screen and (width <=860px) {
-
-    /*index.html*/
-    .options-hero a {
-        font-size: 1.2rem;
-        margin: 0 0.2rem;
+@media (width <= 53rem) {
+    .sobre {
+        height: 100%;
     }
-
-    /*cardapio*/
-    .cardapio p {
-        font-size: small;
-    }
-
-    .cardapio h2,
-    .cardapio strong {
-        font-size: smaller;
-    }
-
-    .card {
-        justify-content: center;
-    }
-
-    .grid {
-        gap: 1px;
-    }
-
-    /*about-us*/
     .sobre .content {
         padding: 1rem;
-        height: 100vh;
+        height: 100%;
+    }
+    .sobre p {
+        font-size: 1.6rem;
     }
 }
+
+/* #endregion */
