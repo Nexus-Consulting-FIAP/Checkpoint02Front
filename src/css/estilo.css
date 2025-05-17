@@ -1,7 +1,9 @@
+/*Usando extensão #region folding*/
+
 /*inter-font // google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/*global*/
+/* #region global */
 * {
     margin: 0;
     padding: 0;
@@ -108,7 +110,14 @@ footer svg {
     height: 17px;
 }
 
-/*index.html*/
+.btn-disabled {
+    background-color: var(--wine-red);
+    pointer-events: none;
+}
+
+/* #endregion */
+
+/* #region home */
 .hero {
     color: var(--white);
     display: flex;
@@ -154,7 +163,9 @@ footer svg {
     width: 1280px;
 }
 
-/*cardapio*/
+/* #endregion */
+
+/* #region cardapio */
 .cardapio {
     height: 100vh;
     background-image: url(../assets/imagem_fundo_menu.jpg);
@@ -235,7 +246,74 @@ footer svg {
     margin: 2rem;
 }
 
-/*about-us*/
+/* #endregion */
+
+/* #region contato */
+#contato {
+    background-image: url(/src/assets/imagem_fundo_contato.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.forms {
+    z-index: 2;
+    background-color: #1B1B1E;
+    position: relative;
+    left: 8vw;
+    width: 45rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6rem 4rem;
+    border-radius: 1rem;
+}
+.forms h3 {
+    color: var(--white);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.forms li {
+    background-color: #fff;
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.forms h4 {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    float: left;
+}
+.forms input {
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.forms button {
+    background-color: var(--red);
+    font-size: 2rem;
+    padding: 1rem 6rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4rem;
+}
+.forms button:hover {
+    background-color: var(--wine-red);
+    cursor: pointer;
+}
+@media (width <= 48rem) {
+    
+}
+/* #endregion */
+
+/* #region about */
 .sobre {
     background-image: url(../assets/imagem_sakura_sobre.jpg);
     background-size: cover;
@@ -264,8 +342,7 @@ footer svg {
     font-size: 2.4rem;
 }
 
-/* -------------------------------------------- */
-/*responsividade*/
+/* #endregion */
 
 @media screen and (width <=1550px) {
 
@@ -300,7 +377,7 @@ footer svg {
     .tabela-promocional p {
         margin: 0.3rem;
     }
-    
+
     /*about-us*/
     .sobre .content {
         padding: 1rem;
@@ -333,7 +410,7 @@ footer svg {
     .grid {
         gap: 1px;
     }
-    
+
     /*about-us*/
     .sobre .content {
         padding: 1rem;
