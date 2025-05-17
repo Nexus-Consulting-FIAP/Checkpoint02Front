@@ -75,8 +75,11 @@ header nav ul li a {
     border-radius: 35px;
 }
 
-header nav ul li a:hover {
+header nav ul li:hover {
     background-color: var(--bright-red);
+   transform: scale(1.2);
+   border-radius: 35px;
+   
 }
 
 .black-opacity {
@@ -170,6 +173,7 @@ section {
 
 .options-hero a:hover {
     background-color: var(--bright-red);
+    transform: scale(1.2);
 }
 
 #imagem-home {
@@ -395,6 +399,7 @@ section {
 .forms button:hover {
     background-color: var(--wine-red);
     cursor: pointer;
+    transform: scale(1.2);
 }
 @media (width <= 54rem) {
     #contato {
