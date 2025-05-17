@@ -1,6 +1,7 @@
 /*inter-font // google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/*global*/
 * {
     margin: 0;
     padding: 0;
@@ -73,6 +74,41 @@ header nav ul li a:hover {
     background-color: var(--bright-red);
 }
 
+.black-opacity {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    opacity: 50%;
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+footer {
+    color: var(--white);
+    background-color: var(--dark);
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+    text-align: justify;
+}
+
+footer div{
+    z-index: 2;
+}
+
+footer svg {
+    position: relative;
+    top: 3px;
+    height: 17px;
+}
+
+/*index.html*/
 .hero {
     color: var(--white);
     display: flex;
@@ -86,21 +122,8 @@ header nav ul li a:hover {
     background-size: cover;
 }
 
-.hero span{
+.hero span {
     color: var(--red)
-}
-
-.black-opacity {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-color: var(--black);
-    opacity: 50%;
-    z-index:1;
-}
-
-.z-2 {
-    z-index: 2;
 }
 
 .home-title {
@@ -111,7 +134,7 @@ header nav ul li a:hover {
     font-size: 3.1rem;
 }
 
-.options-hero a{
+.options-hero a {
     text-decoration: none;
     color: var(--white);
     font-size: 4rem;
@@ -119,11 +142,11 @@ header nav ul li a:hover {
     padding: 6px;
     background-color: var(--red);
     border-radius: 20px;
-    margin: 0 3vw;    
+    margin: 0 3vw;
 }
 
-.options-hero a:hover{
-    background-color: var(--bright-red);   
+.options-hero a:hover {
+    background-color: var(--bright-red);
 }
 
 #imagem-home {
@@ -131,32 +154,101 @@ header nav ul li a:hover {
     width: 1280px;
 }
 
-.contact {
+/*cardapio*/
+.cardapio {
+    height: 100vh;
+    background-image: url(../assets/imagem_fundo_menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    grid-auto-flow: column;
+}
+
+.grid > div {
+    z-index: 2;
+}
+
+.card {
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
     color: var(--white);
     background-color: var(--dark);
-    padding: 0px 10px;
+}
+
+.card h2, .card strong {
+    font-weight: 600;
+}
+
+.card p {
+    font-weight: 300;
+}
+
+.card img {
+    height: 164px;
+    width: 164px;
+    border-radius: 100%;
+}
+
+.tabela-promocional {
+    z-index: 2;
+    padding: 1rem 1rem;
+    border-radius: 20px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 5rem;
-    text-align: justify;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--dark);
 }
 
-.contact svg{
-    position: relative;
-    top: 3px;
-    height: 17px;
+.tabela-promocional .caption {
+    color: var(--red);
+    font-size: larger;
 }
 
+.tabela-promocional h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.tabela-promocional ul {
+    list-style: none;
+}
+
+.tabela-promocional p {
+    margin: 2rem;
+}
+
+/* -------------------------------------------- */
 /*responsividade*/
-@media screen and (width <= 1550px) {
+
+@media screen and (width <=1550px) {
+
+    /*index.html*/
     .options-hero a {
         font-size: 2rem;
         margin: 0 1rem;
     }
+
+    /*cardapio*/
 }
 
-@media screen and (width <= 800px) {
+@media screen and (width <=800px) {
     .options-hero a {
         font-size: 1.2rem;
         margin: 0 0.2rem;
