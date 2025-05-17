@@ -84,8 +84,9 @@ header nav ul li:hover {
 
 .black-opacity {
     position: absolute;
-    height: 91.3vh;
+    height: 100%;
     width: 100%;
+    inset: 0;
     background-color: var(--black);
     opacity: 60%;
     z-index: 1;
@@ -126,6 +127,23 @@ section {
     padding-top: 5rem;
     width: 100%;
 }
+
+@media (width <= 39rem){
+    footer {
+        height: 7rem;
+    }
+}
+
+@media screen and (width <= 32.5rem){
+    footer {
+        padding: 0.2rem;
+        justify-content: space-around;
+        text-align: justify;
+        height: 11rem;
+        flex-direction: column;
+    }
+}
+
 /* #endregion */
 
 /* #region home */
@@ -140,6 +158,10 @@ section {
     background-image: url(../assets/imagem_sushi_home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.content-hero {
+    height: 100vh;
 }
 
 .hero span {
@@ -217,7 +239,7 @@ section {
 
 /* #region cardapio */
 .cardapio {
-    height: 100vh;
+    min-height: 91.25vh;
     background-image: url(../assets/imagem_fundo_menu.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -296,15 +318,22 @@ section {
     margin: 2rem;
 }
 
+@media (width <= 83rem){
+    #cardapio {
+        position: relative;
+    }
+    #cardapio .black-opacity {
+        min-height: 100%;
+        flex: 1;
+    }
+}
+
 @media (width <= 80rem) {
     .cardapio {
         height: 100%;
         flex-direction: column;
         gap: 1rem;
         padding-bottom: 1rem;
-    }
-    .cardapio .black-opacity {
-        height: 100%;
     }
     .card img {
         height: 7rem;
@@ -313,6 +342,11 @@ section {
     .tabela-promocional {
         width: 80%;
         flex-direction: row;
+    }
+}
+@media (width <= 73rem) {
+    .tabela-promocional {
+        flex-direction: column;
     }
 }
 @media (width <= 46rem) {
@@ -461,6 +495,12 @@ section {
     font-size: 2.4rem;
 }
 
+@media (height <= 52rem) {
+    .sobre h2 {
+        font-size: 2rem;
+    }  
+}
+
 @media (width <= 96rem) {
     .sobre .content {
         padding: 1rem;
@@ -472,7 +512,7 @@ section {
 }
 @media (width <= 53rem) {
     .sobre {
-        height: 100%;
+        height: 100vh;
     }
     .sobre .content {
         padding: 1rem;
@@ -480,6 +520,12 @@ section {
     }
     .sobre p {
         font-size: 1.6rem;
+    }
+}
+
+@media (width <= 37rem) {
+    .sobre p {
+        font-size: 1.4rem;
     }
 }
 
